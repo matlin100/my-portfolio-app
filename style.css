@@ -65,19 +65,6 @@ body {
 }
 
 
-.card {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
 /* Add more specific styles for icons, animations, and responsiveness */
 /* Fade-in animation for the modal background */
 @keyframes fadeIn {

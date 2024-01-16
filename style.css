@@ -39,7 +39,6 @@ body {
     text-align: center;
     transition: transform 0.3s;
     box-sizing: border-box;
-    flex-basis: calc(50% - 20px); /* Adjust the width minus margin */
     display: flex; /* Enables Flexbox */
     flex-direction: column; /* Stacks items vertically */
     justify-content: center; /* Centers items vertically in the container */
@@ -61,6 +60,12 @@ body {
 @media screen and (max-width: 700px) {
     .card {
         flex-basis: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .card {
+        flex-basis: calc(50% - 20px); /* Original layout (two cards in a row) on larger screens */
     }
 }
 

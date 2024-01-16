@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chezky Matlin Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <img src="img/p3.jpeg" alt="Your Picture">
+            <h1 id="name">Cezky Matlin</h1>
+        </div>
+        
+        <div id="cards">
+            <a href="mailto:cymatlin@gmail.com" class="card" style="text-decoration: none; color: inherit;">
+                <div  id="email">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email</p>
+                    <p>cymatlin@gmail.com</p>
+                </div>
+            </a>
+            
+            <div class="card" id="linkedin">
+                <i class="fab fa-linkedin"></i>
+                <p>LinkedIn</p>
+            </div>
+            <div class="card" id="facebook">
+                <i class="fab fa-facebook-square"></i>
+                <p>Facebook</p>
+            </div>
+            <div class="card" id="instagram">
+                <i class="fab fa-instagram"></i>
+                <p>Instagram</p>
+            </div>            
+            <div class="card" id="gitlab">
+                <i class="fab fa-gitlab"></i>
+                <p>GitLab</p>
+            </div>
+            <div class="card" id="resume" onclick="openModal()">
+                <i class="fas fa-file-pdf"></i>
+                <p>Resume (PDF)</p>
+            </div>
+            <div id="resumeModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe class="modal-content" src="pdf/CV.pdf"></iframe>
+            </div>        
+        </div>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

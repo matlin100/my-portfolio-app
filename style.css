@@ -19,6 +19,194 @@ body {
     border-radius: 75px; /* Optional: for round shape */
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    margin-bottom: 60px;
+}
+#header {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+#header img {
+    margin-top: 40px;
+    max-width: 170px; /* Maximum width */
+    max-height: 170px; /* Maximum height */
+    width: auto;  /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 75px; /* Optional: for round shape */
+}
+
+/* Add this new CSS code */
+
+#profile-image {
+    max-width: 170px;
+    max-height: 170px;
+    width: auto;
+    height: auto;
+    border-radius: 75px;
+    transition: opacity 5s; /* Add a transition for opacity */
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeInImage {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+#name{
+    margin-top: 20px;
+    margin-bottom:30px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    height: 200px; /* Adjust height as needed */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically in the container */
+    align-items: center; /* Centers items horizontally in the container */
+    animation: popIn 0.5s ease-in-out; /* Apply popIn animation */
+}
+
+
+.card i {
+    font-size: 24px; /* Increase the font size as needed */
+    margin-bottom: 10px; /* Optional: adds space below the icon */
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        flex-basis: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .card {
+        flex-basis: calc(50% - 20px); /* Original layout (two cards in a row) on larger screens */
+    }
+}
+
+
+/* Add more specific styles for icons, animations, and responsiveness */
+/* Fade-in animation for the modal background */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Pop-in animation for the modal content */
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ... (previous CSS code) */
+
+/* Add more specific styles for icons, animations, and responsiveness */
+/* Fade-in animation for the modal background */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Pop-in animation for the modal content */
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: flex; /* Using Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 40px; /* Add padding to prevent touching the edges */
+    animation: fadeIn 0.3s ease-in; /* Apply fade-in animation */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjusted width */
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5); /* Optional: Adds shadow */
+    overflow: auto; /* In case the content is larger than the modal */
+    animation: popIn 0.3s ease-out; /* Apply pop-in animation */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+ /* Add styles for the "Download Resume" link in the modal */
+.download-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.download-link i {
+    font-size: 20px; /* Adjust the icon size as needed */
+}
+
+.download-link:hover {
+    transform: scale(1.1);
+    background-color: #2980b9; /* Change background color on hover */
+}
+
 #name{
     margin-top: 20px;
     margin-bottom:30px;

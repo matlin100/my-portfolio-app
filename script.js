@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
     });
+      const profileImage = document.getElementById('profile-image');
+
+    // Add the "fade-in" class to trigger the animation
+    profileImage.classList.add('fade-in');
+
+    // Remove the "fade-in" class after the animation is complete
+    profileImage.addEventListener('animationend', function() {
+        profileImage.classList.remove('fade-in');
+    });
 });
 
 // Close the modal if the user clicks anywhere outside of it

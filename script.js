@@ -32,13 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Close the modal if the user clicks anywhere outside of it
-window.onclick = function(event) {
+
+
+window.addEventListener('click', closeModalOnOutsideClick);
+window.addEventListener('touchstart', closeModalOnOutsideClick);
+
+function closeModalOnOutsideClick(event) {
     let modal = document.getElementById("resumeModal");
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeModal();
     }
 }
+
 
 function openModal() {
     let modal = document.getElementById("resumeModal");

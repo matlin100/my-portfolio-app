@@ -72,5 +72,7 @@ function closeModal() {
     modalContent.style.animation = 'popOut 0.3s'; // Apply popOut animation
     modalContent.offsetHeight; // Trigger reflow to restart animation
     modalContent.style.animation = null;
+
+    window.location.href = '/';
 }
 

@@ -69,3 +69,4 @@ function closeModal() {
     modalContent.style.animation = null;
 }
 
+
